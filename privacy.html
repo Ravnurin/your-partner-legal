@@ -26,7 +26,7 @@
 <body>
 <main>
 <h1>Privacy Policy for Your Partner</h1>
-<p class="date">Last updated: 20 September 2026</p>
+<p class="date">Last updated: 25 September 2026</p>
 
 <p>Your Partner is a private notebook about one person. This policy explains what the app stores, why, who else can see it, and how you get rid of it.</p>
 
@@ -39,7 +39,8 @@
 <p>The app also keeps one token from Apple. Its only use is to tell Apple to revoke the app's access when you delete your account.</p>
 <p><strong>What you write.</strong> The notes you save: their titles, their text, any date you attach, and the category they sit in. Plus the categories themselves, including any you rename or add.</p>
 <p><strong>The person your notebook is about.</strong> The name, birthday and photo you choose to enter. The photo is resized to roughly 256 pixels on your device before it is uploaded.</p>
-<p>All of this is optional except the account itself. The app never reads your contacts, your calendar, your location, or your photo library beyond the single image you pick for the profile.</p>
+<p><strong>Photos on dates, firsts and people.</strong> Photos you add to a date, a first, or a person are resized on your device, then uploaded to a private object storage bucket, separately from the rest of your notebook. Up to ten photos per date or first, one per person.</p>
+<p>All of this is optional except the account itself. The app never reads your contacts, your calendar, or your location, and only ever sees the photos you deliberately choose to add.</p>
 <p><strong>Technical records.</strong> The server keeps standard request logs: the time of a request, the address it came from, and which endpoint it hit. These exist to keep the service running and to catch abuse. They are not joined to your notes.</p>
 
 <h2>What the app does not do</h2>
@@ -57,15 +58,17 @@
 <tr><th>What</th><th>Why</th><th>Legal basis</th></tr>
 <tr><td>Account identifier and email</td><td>To create your account and sign you back in</td><td>Performance of a contract</td></tr>
 <tr><td>Notes, categories, profile, photo</td><td>To provide the notebook, which is the entire product</td><td>Performance of a contract</td></tr>
+<tr><td>Photos on dates, firsts and people</td><td>To provide the notebook, which is the entire product</td><td>Performance of a contract</td></tr>
 <tr><td>Server request logs</td><td>Keeping the service available and secure</td><td>Legitimate interests</td></tr>
 </table>
 
 <h2>Where it is stored, and who else can see it</h2>
-<p>The data sits in a MongoDB database hosted by MongoDB Atlas in the European Union (Ireland). The API runs on Railway.</p>
-<p>Four companies act as service providers and can technically access infrastructure holding your data in the course of running it:</p>
+<p>The data sits in a MongoDB database hosted by MongoDB Atlas in the European Union (Ireland). The API runs on Railway. Photos on dates, firsts and people sit in a private Cloudflare R2 bucket, not the database.</p>
+<p>Five companies act as service providers and can technically access infrastructure holding your data in the course of running it:</p>
 <ul>
 <li><strong>MongoDB, Inc.</strong> for database hosting.</li>
 <li><strong>Railway Corp.</strong> for server hosting.</li>
+<li><strong>Cloudflare, Inc.</strong> for photo storage, as a processor. Cloudflare cannot see your notebook, only the photo files.</li>
 <li><strong>Expo (650 Industries, Inc.)</strong> for app builds and over-the-air updates. When the app checks for an update it sends the platform, the app version and a random installation identifier. It sends none of your notes.</li>
 <li><strong>Apple Inc.</strong> for sign-in and app distribution.</li>
 </ul>
@@ -75,10 +78,11 @@
 <p>The app keeps a copy of your notes on your phone so they are readable without a connection, and stores your sign-in token in the iOS keychain. Signing out, or deleting your account, clears both. Deleting the app removes them too.</p>
 
 <h2>How long it is kept</h2>
-<p>Your notes are kept until you delete them or delete your account. Server request logs are kept for up to 7 days, then discarded.</p>
+<p>Your notes are kept until you delete them or delete your account. Photos are kept until you delete the photo, delete the date, first or person it is on, or delete your account. Server request logs are kept for up to 7 days, then discarded.</p>
 
 <h2>Deleting everything</h2>
-<p>Open Settings in the app and choose <strong>Delete account</strong>. This permanently removes your account, every note, every category, the profile and the photo from the server, and revokes the Sign in with Apple token the app holds for you. It happens immediately and cannot be undone.</p>
+<p>Open Settings in the app and choose <strong>Delete account</strong>. This permanently removes your account, every note, every category, the profile and its photo, every date, first and person and their photos, and revokes the Sign in with Apple token the app holds for you. It happens immediately and cannot be undone.</p>
+<p>Deleting a single photo, or the date, first or person it is on, removes that photo from storage immediately, without deleting your account.</p>
 <p>If you have deleted the app, reinstall it and sign in with the same Apple ID. You land back in the same notebook and can delete it from Settings.</p>
 <p>The app knows you only by the identifier Apple gives it and, if you chose to share it, your email address. So an emailed request to <a href="mailto:runibrockie@live.com">runibrockie@live.com</a> can be matched to an account only when it comes from the real address you shared at sign-in. If you hid your email or declined to share one, no email can identify your account, and deleting from Settings is the only route. A request that can be matched is carried out within 30 days.</p>
 
