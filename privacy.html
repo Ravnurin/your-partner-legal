@@ -26,9 +26,9 @@
 <body>
 <main>
 <h1>Privacy Policy for Your Partner</h1>
-<p class="date">Last updated: 25 September 2026</p>
+<p class="date">Last updated: 26 September 2026</p>
 
-<p>Your Partner is a private notebook about one person. This policy explains what the app stores, why, who else can see it, and how you get rid of it.</p>
+<p>Your Partner is a private notebook about one person. If you choose to link it with your partner's account, the two of you can share some of it. This policy explains what the app stores, why, who else can see it, and how you get rid of it.</p>
 
 <h2>Who is responsible</h2>
 <p>R&uacute;ni Brockie, an individual developer, is the controller of the data described here.</p>
@@ -40,6 +40,8 @@
 <p><strong>What you write.</strong> The notes you save: their titles, their text, any date you attach, and the category they sit in. Plus the categories themselves, including any you rename or add.</p>
 <p><strong>The person your notebook is about.</strong> The name, birthday and photo you choose to enter. The photo is resized to roughly 256 pixels on your device before it is uploaded.</p>
 <p><strong>Photos on dates, firsts and people.</strong> Photos you add to a date, a first, or a person are resized on your device, then uploaded to a private object storage bucket, separately from the rest of your notebook. Up to ten photos per date or first, one per person.</p>
+<p><strong>Your partner link.</strong> If you link with your partner, the app stores which account you are linked with and the state of the link. While an invite is open, it also stores the invite code and when it expires.</p>
+<p><strong>Push notifications.</strong> If you allow notifications, the app stores a push token for your phone, so it can tell you when your partner links with you or shares something. The notification names who shared, never what they wrote. Date reminders are scheduled on your phone itself and send nothing to the server.</p>
 <p>All of this is optional except the account itself. The app never reads your contacts, your calendar, or your location, and only ever sees the photos you deliberately choose to add.</p>
 <p><strong>Technical records.</strong> The server keeps standard request logs: the time of a request, the address it came from, and which endpoint it hit. These exist to keep the service running and to catch abuse. They are not joined to your notes.</p>
 
@@ -49,8 +51,20 @@
 <li>No analytics, no crash-reporting service, and no behavioural profiling.</li>
 <li>No tracking of you across other apps or websites.</li>
 <li>Your data is never sold, rented, or shared for anyone else's marketing.</li>
-<li>Nothing you write is ever shown to another user. There is no sharing feature, no public profile and no feed.</li>
+<li>Nothing you write is shown to anyone except the one partner you link with, and only what you choose to share. There is no public profile, no feed, and no way to find or message strangers.</li>
 </ul>
+
+<h2>Sharing with your partner</h2>
+<p>Sharing is off until you turn it on, and it only ever reaches one person.</p>
+<ul>
+<li><strong>Linking.</strong> One of you creates an invite code and gives it to the other, who enters it. The one who made the code then confirms. You can be linked with one person at a time.</li>
+<li><strong>What can be shared.</strong> Dates, firsts and noticed notes, one at a time, each only when you mark it as shared. Your notes in the categories, your people and the profile of the person your notebook is about are never shared.</li>
+<li><strong>What your partner can do with a shared item.</strong> Read it, see its photos, and on a shared date add their own photos and a line of their own about how it went. On a shared date idea, either of you can say you've got it; while one of you has, the other sees only its title, so a surprise stays a surprise.</li>
+<li><strong>Unsharing.</strong> Turning sharing off on an item hides it from your partner, along with anything they added to it. Sharing it again brings both back.</li>
+<li><strong>Unlinking.</strong> Either of you can unlink from Settings at any time. The one who unlinks loses access to the other's shared items straight away. What they shared stays readable, but no longer editable, for the partner who stayed, until that partner unlinks too. Either of you can still delete your own items at any time, which removes them for both of you. Linking again with the same person brings the shared items back.</li>
+<li><strong>What the app cannot undo.</strong> Your partner is a person. Once they have read something you shared, deleting it removes it from the app but not from their memory, and the app cannot stop them taking a screenshot.</li>
+</ul>
+<p>If a partner shares something abusive or threatening, or you are worried about how someone is using the app, email <a href="mailto:runibrockie@live.com">runibrockie@live.com</a> with the subject "Report a concern", or use <strong>Report a concern</strong> in Settings. Unlinking stops them seeing anything more of yours straight away. A report is read within 24 hours. To act on it, the developer looks at the items the report points to, and may delete them and close the account responsible, as the <a href="terms.html">Terms of Use</a> set out.</p>
 
 <h2>Why the app stores it, and on what legal basis</h2>
 <p>Under the GDPR:</p>
@@ -59,6 +73,9 @@
 <tr><td>Account identifier and email</td><td>To create your account and sign you back in</td><td>Performance of a contract</td></tr>
 <tr><td>Notes, categories, profile, photo</td><td>To provide the notebook, which is the entire product</td><td>Performance of a contract</td></tr>
 <tr><td>Photos on dates, firsts and people</td><td>To provide the notebook, which is the entire product</td><td>Performance of a contract</td></tr>
+<tr><td>Partner link and shared items</td><td>To show your partner what you choose to share with them</td><td>Performance of a contract</td></tr>
+<tr><td>Push token</td><td>To tell you when your partner links or shares something</td><td>Performance of a contract</td></tr>
+<tr><td>Items named in a report</td><td>Keeping the people who use the app safe</td><td>Legitimate interests</td></tr>
 <tr><td>Server request logs</td><td>Keeping the service available and secure</td><td>Legitimate interests</td></tr>
 </table>
 
@@ -69,25 +86,25 @@
 <li><strong>MongoDB, Inc.</strong> for database hosting.</li>
 <li><strong>Railway Corp.</strong> for server hosting.</li>
 <li><strong>Cloudflare, Inc.</strong> for photo storage, as a processor. Cloudflare cannot see your notebook, only the photo files.</li>
-<li><strong>Expo (650 Industries, Inc.)</strong> for app builds and over-the-air updates. When the app checks for an update it sends the platform, the app version and a random installation identifier. It sends none of your notes.</li>
-<li><strong>Apple Inc.</strong> for sign-in and app distribution.</li>
+<li><strong>Expo (650 Industries, Inc.)</strong> for app builds, over-the-air updates and push notifications. When the app checks for an update it sends the platform, the app version and a random installation identifier. A push notification passes through Expo with your push token and its one line of text. Neither carries your notes.</li>
+<li><strong>Apple Inc.</strong> for sign-in, push notification delivery and app distribution.</li>
 </ul>
-<p>Each is bound to protect the data to the standard set out in this policy and may use it only to provide their service. No one else receives it.</p>
+<p>Each is bound to protect the data to the standard set out in this policy and may use it only to provide their service. Apart from them and the partner you link with, no one else receives it.</p>
 
 <h2>On your device</h2>
-<p>The app keeps a copy of your notes on your phone so they are readable without a connection, and stores your sign-in token in the iOS keychain. Signing out, or deleting your account, clears both. Deleting the app removes them too.</p>
+<p>The app keeps a copy of your notes on your phone so they are readable without a connection, and stores your sign-in token in the iOS keychain. Signing out, or deleting your account, clears both and removes your phone's push token from the server. Deleting the app removes them too.</p>
 
 <h2>How long it is kept</h2>
-<p>Your notes are kept until you delete them or delete your account. Photos are kept until you delete the photo, delete the date, first or person it is on, or delete your account. Server request logs are kept for up to 7 days, then discarded.</p>
+<p>Your notes are kept until you delete them or delete your account. Photos are kept until you delete the photo, delete the date, first or person it is on, or delete your account. An invite code is kept until it is used, cancelled or expires. A push token is kept until you sign out, delete your account, or Apple reports it no longer works. Server request logs are kept for up to 7 days, then discarded.</p>
 
 <h2>Deleting everything</h2>
-<p>Open Settings in the app and choose <strong>Delete account</strong>. This permanently removes your account, every note, every category, the profile and its photo, every date, first and person and their photos, and revokes the Sign in with Apple token the app holds for you. It happens immediately and cannot be undone.</p>
+<p>Open Settings in the app and choose <strong>Delete account</strong>. This permanently removes your account, every note, every category, the profile and its photo, every date, first and person and their photos, and revokes the Sign in with Apple token the app holds for you. It also removes everything you added to your partner's shared items (your photos and your lines on their dates), your push tokens, any open invite, and your side of the partner link. Items you shared disappear for your partner too; items they shared stay theirs. It happens immediately and cannot be undone.</p>
 <p>Deleting a single photo, or the date, first or person it is on, removes that photo from storage immediately, without deleting your account.</p>
 <p>If you have deleted the app, reinstall it and sign in with the same Apple ID. You land back in the same notebook and can delete it from Settings.</p>
 <p>The app knows you only by the identifier Apple gives it and, if you chose to share it, your email address. So an emailed request to <a href="mailto:runibrockie@live.com">runibrockie@live.com</a> can be matched to an account only when it comes from the real address you shared at sign-in. If you hid your email or declined to share one, no email can identify your account, and deleting from Settings is the only route. A request that can be matched is carried out within 30 days.</p>
 
 <h2>Your rights</h2>
-<p>If you are in the EU or the UK, you can ask for a copy of your data, ask for it to be corrected, ask for it to be deleted, object to the processing based on legitimate interests, or ask for your data in a portable format. Email <a href="mailto:runibrockie@live.com">runibrockie@live.com</a>. The same matching limit applies as for deletion: a request can be tied to an account only when it comes from the email address you shared at sign-in. Everything the app holds about you, other than the technical records, is visible to you in the app itself. You also have the right to complain to your national data protection authority.</p>
+<p>If you are in the EU or the UK, you can ask for a copy of your data, ask for it to be corrected, ask for it to be deleted, object to the processing based on legitimate interests, or ask for your data in a portable format. Email <a href="mailto:runibrockie@live.com">runibrockie@live.com</a>. The same matching limit applies as for deletion: a request can be tied to an account only when it comes from the email address you shared at sign-in. Everything the app holds about you, other than the technical records, is visible to you in the app itself. Items your partner wrote and shared with you are their data, not yours, so a request from you covers what you wrote. You also have the right to complain to your national data protection authority.</p>
 
 <h2>Children</h2>
 <p>Your Partner is not directed at children and is not intended for anyone under 16. No account is knowingly created for a child. If you believe a child has created one, email the address above and it will be deleted.</p>
@@ -101,7 +118,7 @@
 <h2>Contact</h2>
 <p><a href="mailto:runibrockie@live.com">runibrockie@live.com</a></p>
 
-<footer>Your Partner &middot; <a href="support.html">Support</a></footer>
+<footer>Your Partner &middot; <a href="support.html">Support</a> &middot; <a href="terms.html">Terms of Use</a></footer>
 </main>
 </body>
 </html>
